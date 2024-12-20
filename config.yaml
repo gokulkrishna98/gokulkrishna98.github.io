@@ -50,8 +50,8 @@ params:
     Scroll down to check my blog post.
     "
     imageUrl: "/images/gokul_profile_image.jpg"
-    imageWidth: 40
-    imageHeight: 40
+    imageWidth: 30
+    imageHeight: 30
     imageTitle: image
     responsiveImages: false
 
