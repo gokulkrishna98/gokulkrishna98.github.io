@@ -191,9 +191,11 @@ for epoch in range(5):
 
 
 ```
+
 Perfomring SGD. Calculate loss, then compute gradient using backward (read about Autograd 
 [here](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html)). Now update the params based on this gradient.
 Gradient descent formula (read about it).
+
 $$ \theta_{j+1} = \theta_j - \alpha \nabla J(\theta_j) $$
 
 ### 6. Evaluate the Dataset.
