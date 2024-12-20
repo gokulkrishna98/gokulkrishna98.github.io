@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gokul&#39;s Website</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Gokul&#39;s Website</description>
+    <generator>Hugo -- 0.140.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPU Hardware</title>
+      <link>http://localhost:1313/posts/gpu-hardware/</link>
+      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gpu-hardware/</guid>
+      <description>&lt;p&gt;In this article, we will have a brief overview of GPU Hardware from programming perspective. I am a software engineer and I do not have time or resources to learn nitty-gritty details of hardware engineering. However, learning about hardware is essential to write efficient and clean programs. I have learned it hard way during my stint at Samsung. We will be looking at discrete GPU setup, then understand how modern NVIDIA GPUs look like and then try to understand each part (from NVIDIA whitepaper)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OperationPass in MLIR</title>
+      <link>http://localhost:1313/posts/operationpass-in-mlir/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/operationpass-in-mlir/</guid>
+      <description>&lt;p&gt;We will be reviewing the shape inference pass implemented in the toy chapter 4. In this article, we will be seeing how to create interface for operation and use that interface to perform modification to IR. The operation which satisfy condition for modification must implement this interface.&lt;/p&gt;
+&lt;h1 id=&#34;interface-for-operation&#34;&gt;Interface for Operation&lt;/h1&gt;
+&lt;p&gt;We can create interface for an operation by inheriting &lt;code&gt;OpInterface&lt;/code&gt; class. We can declare the functions that the interface forces the entity to implement can be added via &lt;code&gt;InterfaceMethod&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>In-lining in MLIR</title>
+      <link>http://localhost:1313/posts/inlining/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/inlining/</guid>
+      <description>&lt;p&gt;In the context of compilers, &lt;code&gt;inlining or inline expansion&lt;/code&gt; is a process (or optimization depending on the use case) that replaces function call with the body of the function. Now let us see how we can inline a function defined in the IR.&lt;/p&gt;
+&lt;h1 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h1&gt;
+&lt;p&gt;Before proceeding, I am implementing these features in my dialect Glow, please find more information &lt;a href=&#34;https://github.com/gokulkrishna98/GGlow/tree/main/lib/Dialect/GGlow&#34;&gt;here&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;One of the main requirements is defining the function feature in the dialect, we will be utilizing traits and tablegen to implement these.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conanicalization 💣</title>
+      <link>http://localhost:1313/posts/canonicalization/</link>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/canonicalization/</guid>
+      <description>&lt;p&gt;This article summarizes my understanding of canonical forms from the perspective of intermediate representation (compilers). We also go through how we can use MLIR pattern rewrite to implement canonicalization of operations.&lt;/p&gt;
+&lt;h1 id=&#34;what-is-canonicalization-&#34;&gt;What is Canonicalization ?&lt;/h1&gt;
+&lt;p&gt;It is a process which converts data (that can have one more possible representation) into a &amp;lsquo;standard&amp;rsquo;, &amp;rsquo;normal&amp;rsquo; or &amp;lsquo;canonical form&amp;rsquo;. We can visualize the data through simple arithmetic expression which can have multiple forms:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Torch Script Bazel</title>
+      <link>http://localhost:1313/posts/torchscript-bazel/</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/torchscript-bazel/</guid>
+      <description>&lt;p&gt;In this article, we will be exploring how to use PyTorch in C++. The Python has lots of overhead and baggage when using in application where the performance is critical, for example in game engines, embedded device application, use of python as front end is bad.&lt;/p&gt;
+&lt;p&gt;The Pytorch provides us C++ front-end APIs and library to write ML application in a static compiled language. You can find documentation &lt;a href=&#34;https://pytorch.org/cppdocs/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this article, we will be using &lt;a href=&#34;https://bazel.build/start/cpp&#34;&gt;Bazel&lt;/a&gt; to build a C++ project which can use Pytorch APIs. The main goal is to read a ML model that has been exported from Pytorch (python) using a C++ application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CmAKE-recipe 🎂</title>
+      <link>http://localhost:1313/posts/cmake-recipe/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cmake-recipe/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As you know, CMake is a build systems that allows us to compile large code files, libraries and versioning with
+with set of rules and giving us the power to configure the build. Let us see how to do CMAKE to build some systems. CMake is mostly used for compiling C and C++ codebases, and I will be using C++ here.
+I followed the official tutorial, please look at it. This just my notes and peasant level understanding.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is MLP?</title>
+      <link>http://localhost:1313/posts/what-is-mlp/</link>
+      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/what-is-mlp/</guid>
+      <description>&lt;p&gt;Multi-Layer Perceptron (MLP) stands as one of the pioneering architectures in deep learning neural networks (DNN).
+Renowned for its power and simplicity, MLPs have laid the foundation for many subsequent advancements in the field.
+In this article, we delve into the science behind MLPs, explore their diverse applications, and walk through the
+process of coding a basic classification neural network using this influential architecture.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;How do humans learn? We tackle real-world problems by interpreting signals and information based on our own understanding of the world, using our brains to devise solutions. However, computers, while powerful, simply process numbers rather than raw signals efficiently (for now!). So, what exactly is meant by machine learning if computers cannot directly interpret these signals? Essentially, it involves mapping certain numerical computations to solve real-world problems. How do we achieve this? By translating real-world phenomena into numerical representations that computers can comprehend and manipulate. For instance, images are converted into pixels, essentially sets of numbers, while textual sentences are transformed into tokens, also represented by numbers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

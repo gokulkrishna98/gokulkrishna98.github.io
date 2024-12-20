@@ -1,0 +1,64 @@
+baseURL: http://example.org/
+title: Gokul's Website
+languageCode: en-us
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: Gokul's Webiste
+  description: "Experimentation and Recording my foolish discoveries"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Gokul
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  # disableThemeToggle: false
+
+  # # read more about this section
+  ShowReadingTime: true
+  # ShowShareButtons: true
+  # ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  # ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  # disableSpecial1stPost: false
+  # disableScrollToTop: false
+  # comments: false
+  # hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false  
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi \U0001F9CC"
+    Content: "I am Gokul, I am interested in Machine Learning, High performance computing and Compilers. 
+    Former Engineer at Samsung Research under CPU, GPU and Compiler Team for Neural Acceleration with 
+    3 years of experience, currently pursuing masters in computer science @ NYU Courant. I have experience in 
+    OpenCL GPU kernels, MLIR, Tensorflow and ArmNN and optimized lot of USP use cases for Flagship Galaxy Devices. 
+    My Passion currently lies in exploring the Neural Accelerators and Compilers."
+    imageUrl: "/images/gokul_profile_image.jpg"
+    imageWidth: 50
+    imageHeight: 50
+    imageTitle: image
+    responsiveImages: false
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/m-gokulkrishna/"
+    - name: github
+      url: "https://github.com/gokulkrishna98"
+    - name: bluesky
+      url: "https://bsky.app/profile/cow-school.bsky.social"
+    - name: x
+      url: "https://x.com/gokul_sage"
