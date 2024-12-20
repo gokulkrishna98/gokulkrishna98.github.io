@@ -76,8 +76,28 @@ SM consists of -
 - **Raytracing cores:** These are special hardware units, needed to perform fast but heavy ray-tracing computation.
 
 ## How does GPU programming maps to Execution on Hardware ? A Story Tale.
+You could check out 3D representation of GPU Hardware and test out few of the Animation made using WebGL. The code is hosted
+[here](https://cims.nyu.edu/~gm3314/graphics/final_project/index.html)
 
-Will be posting on this soon. Cooking 
+There are two aspects to this:
+- Data movement via Memory
+- How the threads execution on a SIMD system.
+
+### Data Movement.
+There are 3 Levels of Memory in my view. Global memory, that is the high bandwidth memory in GPU, L2 Cache and Memory exclusive to each SMs (l1 cache, shared memory and registers).
+
+The data that is transfered from host resides in Global memory. This data can be read and written (based on kernel code) by any SPs in any block. As you can see the contention at the global memory is highest and as well as the time taken itself is really high. l1 and l2 cache serves to take advantage of locality and prevent full access via global memory. Less global memory access the better the performance of your GPU program.
+
+![mem transfer](/images/gpu_mem_transfer.gif)
+The above animation shows how the memory goes from global memory to l2 cache to l1 cache.
+
+### Thread Execution.
+There are multiple steps involved here, the Giga thread engine which takes in the blocks from different kernels and sends it to the block scheduler. Then the job of the block scheduler is to assign the blocks to respective SM based on the resources available. The block will be waiting in queue if none of the SM has available resources, including registers, thread slots, shared memory etc. Then, blocks are executed on SMs on different SMs. There is a catch, all the threads in a block are not executed independently on each SMs as having Fetch, decode and execute hardware for each SP can be expensive, so the threads are grouped into warps of 32 threads. Each thread in a warp can implement the same instruction. For further information, read about warp divergence.
+
+![thread transfer](/images/thread_transfer.gif)
+The above animation shows how the block of thread from thread engine goes from global memory to block scheduler to warp scheduler to SPs.
+![warp transfer](/images/warp_transfer.gif)
+The above animation describes division of threads to warps and how to goes into each SPs.
 
 ## References
 - [Warp-Level Parallelism: Enabling Multiple Replications In Parallel on GPU](https://arxiv.org/abs/1501.01405)
