@@ -3,6 +3,8 @@ title: "What is MLP?"
 date: 2024-03-07
 draft: false
 ShowToc: true
+params:
+  math: true
 # cover:
 #     image: "/images/gokul_image.jpeg"
 #     responsiveImages: false

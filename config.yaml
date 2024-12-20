@@ -12,6 +12,21 @@ minify:
   disableXML: true
   minifyOutput: true
 
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+
 params:
   env: production
   title: Gokul's Webiste
@@ -20,6 +35,7 @@ params:
   author: Gokul
   DateFormat: "January 2, 2006"
   defaultTheme: auto
+  math: true
   # disableThemeToggle: false
 
   # # read more about this section
