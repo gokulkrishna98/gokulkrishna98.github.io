@@ -41,7 +41,7 @@ In our case, we treat high level operations like multiplication, convolution as 
 - Set up JIT to execute the llvm-dialect.
 
 Note: using the term standard dialect, instead of intermediate as it makes more sense.
-Note: MLIR gives option to make specific operation to be legal or illegal. So, when i mention dialect (it includes dialects 😀)
+Note: MLIR gives option to make specific operation to be legal or illegal. So, when i mention dialect (it includes operations 😀)
 ## How to lower a Dialect?
 This is a quick overview of how to convert a high level dialect to standard one. The general steps remain same except the creating new operations, which depends on the standard dialect.
 
