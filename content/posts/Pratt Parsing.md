@@ -88,3 +88,8 @@ Few things to note:
 - `prefix_parse_fns` and `infix_parse_fns` just returns `std::function` for the appropriate 'mutually exclusive parse functions' based on token (from lexer) encountered. This functional object is called.
 - `prefix` operators have higher precedence over `infix` operators, and also we treat parsing identifiers and integrals as prefix parsing (convenience). 
 - Each parsing expression call has a precedence value as argument giving the precedence of operator that was parsed which resulted in this recursive call.
+
+## References
+- 'Writing an interpreter in Go' by Thorstan Ball.
+- Matklad article on Pratt Parsing [here](https://matklad.github.io/2020/04/13/simple-but-powerful-pratt-parsing.html)
+- My github link to the interpreter [here](https://github.com/gokulkrishna98/Interpreter-in-Cpp)
