@@ -58,7 +58,7 @@ Lowering Pass is a class created using CRTP (read further [here](https://en.wiki
 CRTP allows us create interfaces, which is defined by derived class (the class we are implementing) and the API will use this class to perform the required lowering logic using the interfaces we implemented (similar to inheritance with virtual function, CRTP has more strict compile time checking due to templates).
 
 Our work, now boils down to implementing two functions in the current derived class. These functions are:
-1. `getDependentDialects(DialectRegistry &registry`) : In this functions we have to registers the dialect. These are the dialect of operations, type etc which we will be creating in this lowering. Ex,  X1 -> (Y1, Y2, Y3), then we have to register Y1, Y2 and Y3 using this function. Example:
+1. `getDependentDialects(DialectRegistry &registry`) : In this functions we have to registers the dialect. These are the dialect of operations, type etc which we will be created in this lowering. Ex,  X1 -> (Y1, Y2, Y3), then we have to register Y1, Y2 and Y3 using this function. Example:
 ```c++
 void getDependentDialects(DialectRegistry &registry) const override {
 	registry.insert<LLVM::LLVMDialect, scf::SCFDialect>();

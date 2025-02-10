@@ -39,7 +39,7 @@ Don Gohman discusses nuanced topics like : redundancy, inlining, excessive canon
 Now let us see how we can implement canonicalization of operation using MLIR rewrite patterns
 
 # Implementing Canonicalization using MLIR Pattern Rewrite
-This is mainly my implementation of pattern rewrite using tablegen declarative way based of toy chapter 3. You could find the implementation details via this commit: [here](https://github.com/gokulkrishna98/GGlow/commit/4890bb79cbda8090a315f21e95aa778da620748a)
+This is my implementation of pattern rewrite using tablegen declarative way based of toy chapter 3. You could find the implementation details via this commit: [here](https://github.com/gokulkrishna98/GGlow/commit/4890bb79cbda8090a315f21e95aa778da620748a)
 
 Reshape Operation Definition:
 ```tablegen
