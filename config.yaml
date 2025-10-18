@@ -60,11 +60,10 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi \U0001F9CC"
-    Content: "I am Gokul, I am interested in Machine Learning, High performance computing and Compilers. 
+    Content: "I am Gokul, I am interested in Deep Learning, MLSystems and Compilers. 
     Currently working on OnDevice Machine Learning, CoreML Tools @ Apple. I completed my masters in
     computer science from NYU Courant, focusing on Deep Learning and Parallel computing. I also worked as an engineer at
-    Samsung Research Bangalore. My Passion currently lies in exploring the Deep learning, MLSystems and Compilers. Please
-    ignore grammatical errors in my blogs, most of the content is freestyled out of my mind."
+    Samsung Research Bangalore. Please, ignore grammatical errors in my blogs, most of the content is freestyled out of my mind."
     imageUrl: "/images/gokul_profile_image.jpg"
     imageWidth: 30
     imageHeight: 30
